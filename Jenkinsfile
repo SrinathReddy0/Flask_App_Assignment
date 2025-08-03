@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/SrinathReddy0/Flask_App_Assignment.git'
+                git branch: 'main', url: 'https://github.com/SrinathReddy0/Flask_App_Assignment.git'
             }
         }
 

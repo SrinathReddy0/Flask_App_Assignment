@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: enhanced-devops-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: enhanced-devops-app
+  template:
+    metadata:
+      labels:
+        app: enhanced-devops-app
+    spec:
+      containers:
+      - name: enhanced-devops-app
+        image: <your-dockerhub-username>/enhanced-devops-app:latest
+        ports:
+        - containerPort: 5000
